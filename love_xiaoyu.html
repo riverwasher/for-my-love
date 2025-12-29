@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给最爱的小钰</title>
+    <style>
+        /* 全局重置与字体设定 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 柔和的米色背景，显得温暖高级 */
+            background-color: #F9F7F2;
+            font-family: "Songti SC", "SimSun", "Times New Roman", serif; /* 优先使用宋体，显得文艺 */
+            color: #4A4A4A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* 防止滚动条 */
+        }
+
+        /* 主容器：像一张精致的卡片 */
+        .card-container {
+            background-color: #FFFFFF;
+            width: 90%;
+            max-width: 420px; /* 限制最大宽度，保持紧凑 */
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* 极淡的阴影，增加层次感 */
+            border-radius: 4px; /* 轻微圆角 */
+            text-align: center;
+            position: relative;
+
+            /* 初始状态用于动画 */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: floatUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* 拍立得风格的图片容器 */
+        .photo-frame {
+            width: 100%;
+            padding: 10px;
+            background: #fff;
+            /* 给图片加一个很细的边框，模拟胶片感 */
+            border: 1px solid #EAEAEA;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: sepia(10%) contrast(105%); /* 轻微滤镜，增加胶片质感 */
+        }
+
+        /* 文字部分 */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            color: #2C2C2C;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #787878;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 副标题用无衬线体 */
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* 装饰性元素：爱心 */
+        .heart {
+            color: #D4A5A5; /* 莫兰迪粉色 */
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* 动画定义 */
+        @keyframes floatUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            .card-container {
+                width: 85%;
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- 图片区域 -->
+        <div class="photo-frame">
+            <!-- 替换下方的 src 为你的图片路径 -->
+            <img src="19b6967501b71.jpg" alt="最美的小钰">
+        </div>
+
+        <!-- 文字区域 -->
+        <h1>宝宝我爱你</h1>
+        <p class="subtitle">
+            小钰就是<br>
+            最善良、美丽的女孩
+        </p>
+
+        <!-- 结尾装饰 -->
+        <div class="heart">♥</div>
+    </div>
+
+</body>
+</html>
